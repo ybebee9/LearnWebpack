@@ -13,14 +13,15 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    { loader: MiniCssExtractPlugin.loader },
-                    "css-loader"
-                ]
+                // use: [
+                //     { loader: MiniCssExtractPlugin.loader },
+                //     "css-loader"
+                // ]
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
-    plugins: [
-        new MiniCssExtractPlugin()
-    ],
+    // plugins: [
+    //     new MiniCssExtractPlugin()
+    // ],
 }
